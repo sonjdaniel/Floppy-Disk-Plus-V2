@@ -6,5 +6,35 @@ const Monster = require("./Monster");
 const Pokemon = require("./Pokemon");
 
 User.hasMany(Pokemon, {
-  foreignKey: "user_id",
+  foreignKey: 'user_id',
 });
+
+User.hasMany(Game, {
+  foreignKey: 'user_id',
+});
+
+Pokemon.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+Level.hasMany(Monster, {
+  foreignKey: 'level_id',
+});
+
+Monster.belongsTo(Level, {
+  foreignKey: 'level_id',
+});
+
+Level.belongsTo(Game, {
+  foreignKey: 'game_id',
+});
+
+Game.belongsTo(User, {
+  foreignKey: 'user_id',
+});
+
+Game.hasMany(Level,{
+  foreignKey: 'game_id',
+})
+
+module.exports = { User, Game, Level, Monster, Pokemon };
