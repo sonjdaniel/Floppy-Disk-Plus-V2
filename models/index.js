@@ -36,5 +36,4 @@ Game.belongsTo(User, {
 Game.hasMany(Level,{
   foreignKey: 'game_id',
 })
-
 module.exports = { User, Game, Level, Monster, Pokemon };
