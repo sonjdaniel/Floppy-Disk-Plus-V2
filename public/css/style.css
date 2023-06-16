@@ -22,3 +22,12 @@ header, .project:not(:last-child) {
   font-weight: bold;
   margin-left: -5px;
 }
+
+.background-image {
+  background-color: blue;
+ background-image: url('../images/pokemonbackground.jpg');
+/* Additional CSS properties for positioning, size, etc. */
+width: 100vw;
+height: 100vh;
+background-size: cover;
+  }

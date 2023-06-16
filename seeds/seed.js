@@ -1,6 +1,6 @@
 const sequelize = require('../config/connection');
 const { User, Project } = require('../models');
-
+const imagePath = '.assets/images/pokemonbackground.jpg'; // Set the path to your image
 const userData = require('./userData.json');
 const projectData = require('./projectData.json');
 
