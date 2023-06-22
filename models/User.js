@@ -42,5 +42,33 @@ User.init(
             allowNull: false,
           },
         },
-    
-)
+        // trying to figure out the hooks
+        {
+          hooks: {
+            async beforeCreate(newUserData) {
+              newUserData.password = await bcrypt.hash(newUserData.password, 8);
+              return newUserData;
+            },
+            async beforeBulkCreate(newUsersData) {
+              for (var each of newUsersData) {
+                each.password = await bcrypt.hash(each.password, 8);
+              }
+              return newUsersData;
+            },
+          },
+          // hooks: {
+          //   async beforeBulkCreate(newUsersData) {
+          //     for (var each of newUsersData) {
+          //       each.password = await bcrypt.hash(each.password, 8);
+          //     }
+          //     return newUsersData;
+          //   },
+          // },
+          sequelize,
+          freezeTableName: true,
+          underscored: true,
+          modelName: 'user',
+        }
+      );
+      
+      module.exports = User;
