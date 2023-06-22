@@ -11,4 +11,14 @@ Game.init(
       primaryKey: true,
       autoIncrement: true,
     },
-})
+},
+{
+  sequelize,
+  timestamps: false,
+  freezeTableName: true,
+  underscored: true,
+  modelName: 'game',
+}
+);
+
+module.exports=Game

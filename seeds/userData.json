@@ -1,17 +1,16 @@
 [
   {
-    "name": "Sal",
-    "email": "sal@hotmail.com",
-    "password": "password12345"
+    "username": "user3",
+    "password": "12345678",
+    "gender": "male",
+    "avatar":
+      "https://static.wikia.nocookie.net/pokemon/images/5/57/Red_FireRed_and_LeafGreen.png"
   },
   {
-    "name": "Lernantino",
-    "email": "lernantino@gmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Amiko",
-    "email": "amiko2k20@aol.com",
-    "password": "password12345"
+    "username": "user4",
+    "password": "ABC12345",
+    "gender": "female",
+    "avatar":
+      "https://static.wikia.nocookie.net/pokemon/images/0/01/Green_FireRed_and_LeafGreen.png"
   }
 ]

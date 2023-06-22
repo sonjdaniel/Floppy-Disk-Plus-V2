@@ -1,9 +1,9 @@
 //Starting code
-// const User = require("./User");
-// const Game = require("./Game");
-// const Level = require("./Level");
-// const Monster = require("./Monster");
-// const Pokemon = require("./Pokemon");
+ const User = require("./User");
+ const Game = require("./Game");
+ const Level = require("./Level");
+ const Monster = require("./Monster");
+ const Pokemon = require("./Pokemon");
 
 // User.hasMany(Pokemon, {
 //   foreignKey: 'user_id',
@@ -36,4 +36,4 @@
 // Game.hasMany(Level,{
 //   foreignKey: 'game_id',
 // })
-// module.exports = { User, Game, Level, Monster, Pokemon };
+ module.exports = { User, Game, Level, Monster, Pokemon };

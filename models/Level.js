@@ -11,4 +11,33 @@ Level.init(
       primaryKey: true,
       autoIncrement: true,
     },
-})
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    monster_left: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    monsterTurn: {
+      type: DataTypes.BOOLEAN,
+      default: false,
+      allowNull: false,
+    },
+    game_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'game',
+          key: 'id',
+        },
+    },
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'level',
+  }
+);
+
+module.exports = Level;
