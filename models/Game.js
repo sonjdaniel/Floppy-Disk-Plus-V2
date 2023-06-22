@@ -40,4 +40,3 @@ Game.init(
 );
 
 module.exports = Game;
-    
