@@ -1,23 +1,23 @@
 {{! If not logged in, show a splash screen, otherwise, show play a new game }}
-<div class='row background'>
+<div class="row background">
   {{#if loggedIn}}
-    <div class='col d-flex align-items-center flex-column'>
+    <div class="col d-flex align-items-center flex-column">
       <img
-        src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png'
-        id='login-splash'
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/132.png"
+        id="login-splash"
       />
-      <button type='button' class='btn btn-success' id='playBtn'>PLAY
+      <button type="button" class="btn btn-success" id="playBtn">PLAY
         POKEBATTLE!</button>
-      <div class='white-text'>Logged in as {{username}}</div>
+      <div class="white-text">Logged in as {{username}}</div>
     </div>
   {{else}}
-    <div class='col d-flex justify-content-center flex-row'>
+    <div class="col d-flex justify-content-center flex-row">
       <img
-        src='/images/home_signin_alt.png'
-        style='border-radius: 20%; width: 70%; height: 70%;'
+        src="/images/home_signin.png"
+        style="border-radius: 20%; width: 70%; height: 70%;"
         data-img_credit="mxpux"
       />
     </div>
   {{/if}}
 </div>
-<script src='/js/menu/home.js'></script>
+<script src="/js/menu/home.js"></script>
