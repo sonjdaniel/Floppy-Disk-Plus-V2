@@ -1,37 +1,55 @@
 const router = require('express').Router();
 const { Game } = require('../../models');
 
-//Get one of the games
-router.get('/:id', async (req, res) => {
-    try {
-        const gameOne = await Game.findByPk(req.params.id)
-        res.json(gameOne)
-    } catch(err) {
-        console.log(err)
-    }
-});
-
-//Get all of the games
+// GET all games
 router.get('/', async (req, res) => {
-    try {
-        const games = await Game.findAll();
-        res.json(games)
-    } catch(err) {
-        console.log(err)
-    }
+  try {
+    const gameData = await Game.findAll();
+
+    res.json(gameData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
-//Delete a game
-router.delete('/:id', async (req, res) => {
-    try {
-        const { id } = req.params;
-        const where = { id };
-        const gameOne = await Game.destroy({ where });
+// GET one game
+router.get('/:id', async (req, res) => {
+  try {
+    const gameData = await Game.findByPk(req.params.id);
 
-        gameOne;
-    } catch(err) {
-        console.log(err, "Could not delete game")
-    }
+    // testing the route
+    res.json(gameData);
+
+    // For sending userData to login.handlebars
+    // res.render('login', { userData, loggedIn: req.session.loggedIn });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const gameData = await Game.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    // For testing
+    res.json(gameData);
+
+    // For when working with cookies
+    // if (req.session.loggedIn) {
+    //   req.session.destroy(() => {
+    //     res.status(204).end();
+    //   });
+    // }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
