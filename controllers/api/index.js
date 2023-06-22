@@ -1,8 +1,14 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const projectRoutes = require('./projectRoutes');
+const users = require('./user-routes');
+const pokemons = require('./pokemon-routes');
+const levels = require('./levels-routes');
+const monsters = require('./monster-routes');
+const games = require('./game-routes');
 
-router.use('/users', userRoutes);
-router.use('/projects', projectRoutes);
+router.use('/users', users);
+router.use('/pokemons', pokemons);
+router.use('/levels', levels);
+router.use('/monsters', monsters);
+router.use('./games', games);
 
 module.exports = router;

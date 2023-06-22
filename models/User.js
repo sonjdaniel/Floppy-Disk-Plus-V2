@@ -42,7 +42,6 @@ User.init(
             allowNull: false,
           },
         },
-        // trying to figure out the hooks
         {
           hooks: {
             async beforeCreate(newUserData) {
