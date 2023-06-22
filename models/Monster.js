@@ -54,4 +54,13 @@ Monster.init(
         key: 'id',
       },
     },
-})
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'monster',
+  }
+);
+
+module.exports = Monster;
