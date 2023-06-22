@@ -11,7 +11,7 @@
 }
 
 .body {
-  background-color: #fff
+  background-color: #201c24;
 }
 
 #pokebattle {
@@ -41,18 +41,18 @@
 }
 
 .home-title {
-  background-color: #fff;
+  background-color: #201c24;
   padding: 20px;
   font-family: 'Press Start 2P', cursive;
 }
 
 .nav-link {
-  color: #fff;
+  color: #201c24;
   font-family: 'Press Start 2P', cursive;
 }
 
 .background {
-  background-color: #fff;
+  background-color: #201c24;
   height: 100%;
 }
 
