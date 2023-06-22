@@ -58,5 +58,14 @@ Pokemon.init(
               key: 'id',
             },
           },
-    }
-)
+        },
+        {
+          sequelize,
+          freezeTableName: true,
+          underscored: true,
+          modelName: 'pokemon',
+        }
+      );
+      
+      module.exports = Pokemon;
+      
