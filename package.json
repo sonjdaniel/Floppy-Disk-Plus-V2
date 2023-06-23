@@ -1,5 +1,5 @@
 {
-  "name": "pokebattler",
+  "name": "pokebattle",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -21,7 +21,7 @@
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "mysql2": "^2.2.5",
-    "nodemon": "^2.0.12",
+    "nodemon": "^1.14.9",
     "sequelize": "^6.6.5"
   }
 }
